@@ -1,0 +1,24 @@
+
+.loading{
+    border: solid #fff;
+    animation: changeGradient .5s infinite alternate;
+}
+.a{
+    width: 80%;
+}
+.b{
+    width: 70%;
+}
+.c{
+    width: 70%;
+}
+@keyframes changeGradient{
+    from{
+        background-color: lightgray;
+        color: lightgray
+    }
+    to{
+        background-image: white;
+        color: white
+    }
+} 

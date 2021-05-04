@@ -1,0 +1,4 @@
+  dezembro 1979  janeiro 1980  fevereiro 1980  março 1980  abril 1980  maio 1980  junho 1980  ...  agosto 2020  setembro 2020  outubro 2020  novembro 2020  dezembro 2020  janeiro 2021  fevereiro 2021
+0           ...          6.62            4.62        6.04        5.29        5.7        5.31  ...         0.24           0.64          0.86           0.89           1.35          0.25            0.86
+
+[1 rows x 495 columns]
