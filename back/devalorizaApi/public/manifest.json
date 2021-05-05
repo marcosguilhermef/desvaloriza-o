@@ -1,0 +1,10 @@
+{
+    "name": "DesvalorizaJS",
+    "short_name": "DesvalorizaJS",
+    "theme_color": "#f32121",
+    "background_color": "#ffffff",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/"
+  }
