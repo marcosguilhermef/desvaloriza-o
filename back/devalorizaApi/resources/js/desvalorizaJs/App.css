@@ -7,3 +7,7 @@
   height: 80vh;
   width: 80vw;
 }
+.border-radius{
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0,0,0,.125);;
+}

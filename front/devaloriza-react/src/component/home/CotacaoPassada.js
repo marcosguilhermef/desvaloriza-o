@@ -20,7 +20,7 @@ export const  CotacaoPassada = (props) => {
                     return (<Dropdown.Item key={e['_id']} onClick={ ()=>  selectItem(e['tag']) }>{ e['tag'] }</Dropdown.Item>)
                 })}
             </Dropdown.Menu>
-        </Dropdown>
+        </Dropdown> 
         </Form.Group>
 
         <Form.Group controlId="dataInicial">
@@ -28,7 +28,7 @@ export const  CotacaoPassada = (props) => {
             <Form.Control type="date" onChange={dataPassada} min="1995-01-01" max={moment().format('YYYY-MM-DD')}  pattern="[0-9]{4}-[0-9]{2}"></Form.Control>
         </Form.Group>
         <Form.Group controlId="dataFinal">
-            <Form.Label>Data passada:</Form.Label>
+            <Form.Label>Data final:</Form.Label>
             <Form.Control type="date" onChange={dataPassada}  min="1995-01-01" max={moment().format('YYYY-MM-DD')}  pattern="[0-9]{4}-[0-9]{2}"></Form.Control>
         </Form.Group>
         <Form.Group controlId="valor-passado">

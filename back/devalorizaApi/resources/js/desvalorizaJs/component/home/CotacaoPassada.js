@@ -20,7 +20,7 @@ export const  CotacaoPassada = (props) => {
                     return (<Dropdown.Item key={e['_id']} onClick={ ()=>  selectItem(e['tag']) }>{ e['tag'] }</Dropdown.Item>)
                 })}
             </Dropdown.Menu>
-        </Dropdown>
+        </Dropdown> 
         </Form.Group>
 
         <Form.Group controlId="dataInicial">

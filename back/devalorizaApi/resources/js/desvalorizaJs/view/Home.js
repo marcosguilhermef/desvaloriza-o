@@ -8,6 +8,7 @@ import produtorio from '../component/funcoesCompartilhadas/produtorio'
 import moment from 'moment';
 
 
+
 const mapStateToProps = state => {
     return { ...state }
 };
@@ -32,12 +33,12 @@ export class Home extends React.Component {
         this.handleDateSubmit = this.handleDateSubmit.bind(this)
     }
     receberValor(e) {
-        var valor = !isNaN(e.target?.value) ? e.target?.value : 0
+        //var valor = !isNaN(e.target?.value) ? e.target?.value : 0
         if (e.target.id === 'valor-atual') {
-            this.setState({ valorAtual: parseFloat(valor) })
+            this.setState({ valorAtual: parseFloat(e.target?.value) })
             this.converterValor()
         } else {
-            this.setState({ valorPassado: parseFloat(valor) })
+            this.setState({ valorPassado: parseFloat(e.target?.value) })
             this.converterValorAoContrario()
         }
     }
@@ -56,7 +57,8 @@ export class Home extends React.Component {
     async CalcularVariareis() {
         await this.props.fetchDados(this.state.datas);
         await this.props.fetchConfig();
-        this.setState({ taxa: produtorio(this.props.api.dadosHitoricos)})
+        console.log('as',produtorio(this.props.api.dadosHitoricos))
+        this.setState({ taxa: produtorio(this.props.api.dadosHitoricos) })
     }
     atualizaStoreDeData(state, key) {
         this.props.setData({ state, key: key }, this.CalcularVariareis())
@@ -76,45 +78,38 @@ export class Home extends React.Component {
         this.CalcularVariareis();
     }
     render() {
-    /*const content = {
-            height: '100%',
-          } */
+        /*const content = {
+                height: '100%',
+              } */
         return (
             <Container fluid>
-                <Row>
-                    <Col sm={1}>
-                    </Col>
-                    <Col>
-                        <main>
-                            <Row style={{  marginTop: '5%' }}>
-                                <Col style={{ marginBottom: "1%" }}>
-                                    <Card style={{ height: '100%' }}>
-                                        <Card.Body>
-                                            <CotacaoPassada valorconvertido={this.state.valorPassado} recebervalor={this.receberValor} dataPassada={this.handleDateSubmit} opcoesIndice={this.props.config.indices} datas={this.state.datas} />
-                                        </Card.Body>
-                                    </Card>
-                                </Col>
-                                <Col style={{ marginBottom: "1%" }}>
-                                    <Card style={{ height: '100%', marginBottom: '1%' }}>
-                                        <Card.Body>
-                                            <CotacaoAtual valorconvertido={this.state.valorAtual} recebervalor={this.receberValor} taxa={this.state.taxa} datas={this.state.datas} status={this.props.api.status}/>
-                                        </Card.Body>
-                                    </Card>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col>
-                                    <Card>
-                                        <Card.Body>
-                                            <GraficoBarra inflacao={this.props.api.dadosHitoricos}/>
-                                        </Card.Body>
-                                    </Card>
-                                </Col>
-                            </Row>
-                        </main>
-                    </Col>
-                    <Col sm={1}></Col>
-                </Row>
+                <main className="m-sm-5 p-sm-5 ">
+                    <Row>
+                        <Col className="m-1">
+                            <Card style={{ height: '100%' }}>
+                                <Card.Body>
+                                    <CotacaoPassada valorconvertido={this.state.valorPassado} recebervalor={this.receberValor} dataPassada={this.handleDateSubmit} opcoesIndice={this.props.config.indices} datas={this.state.datas} />
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                        <Col className="m-1">
+                            <Card style={{ height: '100%'}}>
+                                <Card.Body>
+                                    <CotacaoAtual valorconvertido={this.state.valorAtual} recebervalor={this.receberValor} taxa={this.state.taxa} datas={this.state.datas} status={this.props.api.status} />
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className="m-1">
+                            <Card style={{ height: '100%'}}>
+                                <Card.Body>
+                                    <GraficoBarra inflacao={this.props.api.dadosHitoricos} />
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    </Row>
+                </main>
             </Container>
         )
     }

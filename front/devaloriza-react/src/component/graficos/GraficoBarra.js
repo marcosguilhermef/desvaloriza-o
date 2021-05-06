@@ -78,9 +78,7 @@ export class GraficoBarra extends React.Component {
     }
     render() {
         return (
-            <div className="chart-container">
-                <Bar data={this.dados()} />
-            </div>
+            <Bar data={this.dados()} />
         )
     }
 }
