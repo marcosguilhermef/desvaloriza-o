@@ -9,7 +9,7 @@ export const  CotacaoPassada = (props) => {
     const optionsIndice             =       props?.opcoesIndice
     return(
     <>
-        <Card.Title className="text-center">Cortação passada</Card.Title>
+        <Card.Title className="text-center">Cotação passada</Card.Title>
         <Form.Group>
         <Dropdown className='lg-12'>
             <Dropdown.Toggle variant="success" id="dropdown-basic">
@@ -35,7 +35,7 @@ export const  CotacaoPassada = (props) => {
             <Form.Label>Valor atual:</Form.Label>
             <Form.Control type="number" placeholder="R$ 0,00" value={valorConvertido} onChange={receberValor}/>
         </Form.Group>
-{/*         <h5>Com esse valor você compraria naquela época:</h5>
+    {/*         <h5>Com esse valor você compraria naquela época:</h5>
             <ul>
                 <li>35kg de 🥩 carne</li>
                 <li>1500 unidades de 🥚 ovo</li>

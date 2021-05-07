@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Desvalorização é uma ferramenta criada para mostrar a perda do poder de compra do real nos últimos anos e como isso afeta diretamente na vida dos brasileiros." />
+    <meta name="facebook-domain-verification" content="dz0rtvkf5s20ww9d9g1m8j960kp7bv" />
     <meta property="og:url"            content="http://desvalorizacao.com/" />
     <meta property="og:type"           content="site" />
     <meta property="og:title"          content="Quando o seu dinheiro se desvalorizou nos últimos anos? " />
