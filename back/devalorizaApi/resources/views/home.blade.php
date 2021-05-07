@@ -9,7 +9,7 @@
     <meta property="og:type"           content="site" />
     <meta property="og:title"          content="Quando o seu dinheiro se desvalorizou nos últimos anos? " />
     <meta property="og:description"    content="Essa ferramenta tem o objetico de demonstrar o tanto que o seu dinheiro se desvalorizou nos últimos anos." />
-    <meta property="og:image"          content="http://desvalorizacao.com/public/android-chrome-512x512.png" />
+    <meta property="og:image"          content="https://desvalorizacao.com/image/android-chrome-512x512.png" />
 
     <link rel="icon" href="{{ asset('image/navegador.png') }}" />
     <link rel="apple-touch-icon" href="{{ asset('image/apple-touch-icon.png') }}" />
