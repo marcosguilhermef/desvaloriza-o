@@ -30,7 +30,7 @@ const Sobre = (props) => {
             <main className="m-sm-5 p-sm-5 ">
                 <Row>
                     <Col className="text-center border-radius m-1" sm>
-                        <h3>Sobre</h3>
+                        <h3 className="mt-4">Sobre</h3>
                         <p className="text-justify">
                             Projeto desenvolvido com o objetivo de informar sobre a desvalorização do real durante as útimas decádas. Este projeto ainda não está completo, portanto toda semana (domingo) é lançada alguma atualização.
                             Atualmente estamos usando o indice IPCA trimestral como referência.
@@ -40,7 +40,7 @@ const Sobre = (props) => {
                         </p>
                     </Col>
                     <Col className="text-center border-radius m-1" sm>
-                        <h3>Ajude o projeto</h3>
+                        <h3 className="mt-4">Ajude o projeto</h3>
                         <p className="text-justify">
                             Caso tenha interesse em colabora com o projeto, aqui está algumas de nossas contas:
                         </p>

@@ -6700,6 +6700,7 @@ var Sobre = function Sobre(props) {
           className: "text-center border-radius m-1",
           sm: true,
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
+            className: "mt-4",
             children: "Sobre"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
             className: "text-justify",
@@ -6712,6 +6713,7 @@ var Sobre = function Sobre(props) {
           className: "text-center border-radius m-1",
           sm: true,
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
+            className: "mt-4",
             children: "Ajude o projeto"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
             className: "text-justify",

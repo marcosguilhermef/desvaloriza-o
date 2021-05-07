@@ -3,8 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
+    <meta name="description" content="Desvalorização é uma ferramenta criada para mostrar a perda do poder de compra do real nos últimos anos e como isso afeta diretamente na vida dos brasileiros." />
+    <meta property="og:url"            content="http://desvalorizacao.com/" />
+    <meta property="og:type"           content="site" />
+    <meta property="og:title"          content="Quando o seu dinheiro se desvalorizou nos últimos anos? " />
+    <meta property="og:description"    content="Essa ferramenta tem o objetico de demonstrar o tanto que o seu dinheiro se desvalorizou nos últimos anos." />
+    <meta property="og:image"          content="http://desvalorizacao.com/public/android-chrome-512x512.png" />
+
     <link rel="icon" href="{{ asset('image/navegador.png') }}" />
     <link rel="apple-touch-icon" href="{{ asset('image/apple-touch-icon.png') }}" />
     <link rel="shortcut icon" href="{{ asset('image/favicon.ico') }}" >
