@@ -5442,8 +5442,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function App() {
-  react_ga__WEBPACK_IMPORTED_MODULE_6__.default.initialize('G-FQX53NY6HS', {
-    debug: false
+  react_ga__WEBPACK_IMPORTED_MODULE_6__.default.initialize('UA-196508960-1', {
+    debug: true
   });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.BrowserRouter, {
