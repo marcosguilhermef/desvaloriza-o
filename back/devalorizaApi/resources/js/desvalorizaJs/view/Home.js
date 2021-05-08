@@ -7,7 +7,9 @@ import { fetchDados, setData, fetchConfig } from '../server/apiProvider'
 import produtorio from '../component/funcoesCompartilhadas/produtorio'
 import moment from 'moment';
 
+import ReactGA from 'react-ga'
 
+ReactGA.initialize('UA-196508960-1', { debug: false });
 
 const mapStateToProps = state => {
     return { ...state }
@@ -75,6 +77,7 @@ export class Home extends React.Component {
         //console.log('props',this.props)
     }
     componentDidMount() {
+        ReactGA.pageview(window.location.pathname + window.location.search);
         this.CalcularVariareis();
     }
     render() {

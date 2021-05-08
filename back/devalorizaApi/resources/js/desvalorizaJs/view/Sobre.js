@@ -1,11 +1,20 @@
-import React, {useRef} from 'react'
-import { Row, Col, Container, Form, Button } from 'react-bootstrap'
+import React, {useRef, useEffect} from 'react'
+import { Row, Col, Container, Form, Button } from 'react-bootstrap'  
+import ReactGA from 'react-ga'
+
+ReactGA.initialize('UA-196508960-1', { debug: false });
+
 const Sobre = (props) => {
     const pix = useRef(null);
     const bitcoin = useRef(null);
     const buttaoPix = useRef(null);
     const butaoBitcoin = useRef(null);
 
+    useEffect( () => {
+        //ReactGA.initialize('UA-196508960-1', { debug: true });
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    })
+    
     function copiar(modo,botao){
       let imput = modo.current
       var botao = botao.current
