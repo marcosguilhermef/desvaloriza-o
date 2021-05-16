@@ -8,8 +8,8 @@ import produtorio from '../component/funcoesCompartilhadas/produtorio'
 import moment from 'moment';
 import {Helmet} from "react-helmet";
 import NavbarHome from '../component/navbar/navbarSsr'; 
-
-
+import ReactGA from 'react-ga'
+ReactGA.initialize('UA-196508960-1', { debug: false });
 
 const mapStateToProps = state => {
     return { ...state }
@@ -84,6 +84,7 @@ class Home extends React.Component {
         //console.log('props',this.props)
     }
     componentDidMount() {
+        ReactGA.pageview(window.location.pathname + window.location.search);
         this.CalcularVariareis();
     }
     render() {

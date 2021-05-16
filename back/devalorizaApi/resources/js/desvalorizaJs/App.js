@@ -6,11 +6,7 @@ import Home from './view/Home';
 import Sobre from './view/Sobre';
 import { Route, Switch,BrowserRouter  } from "react-router-dom";
 
-import ReactGA from 'react-ga';
-
-
 function App() {
-  ReactGA.initialize('UA-196508960-1', { debug: false });
   return (
     <>
       <BrowserRouter>

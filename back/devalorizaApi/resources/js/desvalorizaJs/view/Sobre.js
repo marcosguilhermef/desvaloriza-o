@@ -1,8 +1,10 @@
-import React, {useRef} from 'react'
+import React, {useRef, useEffect} from 'react'
 import { Row, Col, Container, Form, Button } from 'react-bootstrap'
 import NavbarHome from '../component/navbar/navbarSsr'; 
 import {Helmet} from "react-helmet";
+import ReactGA from 'react-ga'
 
+ReactGA.initialize('UA-196508960-1', { debug: false });
 
 const Header = () => {
     return(
@@ -33,6 +35,9 @@ const Sobre = (props) => {
     function alterarBotao(botao){
         botao.disabled = !botao.disabled
     }
+    useEffect( () => {
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    })
     function textoBotao(botao, texto){
         botao.textContent = texto
 
