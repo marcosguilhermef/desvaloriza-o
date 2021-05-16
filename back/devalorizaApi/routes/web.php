@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SobreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,15 +21,9 @@ use Inertia\Inertia;
 }); */
 Inertia::setRootView('ssr') ;
 
-Route::get('/', function () {
-    return Inertia::render('Home');
-});
-Route::get('/sobre', function () {
-    return Inertia::render('Sobre');
-});
+Route::get('/',HomeController::class);
+Route::get('/sobre', SobreController::class );
 
-Route::get('/teste', function () {
-    return Inertia::render('Teste');
-});
+Route::get('/teste');
 
 

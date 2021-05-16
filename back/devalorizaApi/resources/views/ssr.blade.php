@@ -6,7 +6,7 @@
     <link rel="icon" href="{{ asset('image/navegador.png') }}" />
     <link rel="apple-touch-icon" href="{{ asset('image/apple-touch-icon.png') }}" />
     <link rel="shortcut icon" href="{{ asset('image/favicon.ico') }}" >
-
+    {!! $page['props']['tag'] !!}
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -21,7 +21,6 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Desvalorização</title>
     <script src="{{ asset('js/ssr.js') }}" defer></script>
   </head>
   <body>

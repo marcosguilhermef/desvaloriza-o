@@ -9100,31 +9100,10 @@ var mapDispatchToProps = function mapDispatchToProps() {
 };
 
 var Header = function Header() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)(react_helmet__WEBPACK_IMPORTED_MODULE_8__.Helmet, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("title", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_helmet__WEBPACK_IMPORTED_MODULE_8__.Helmet, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("title", {
       children: "Desvaloriza\xE7\xE3o"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("meta", {
-      name: "description",
-      content: "Desvaloriza\xE7\xE3o \xE9 uma ferramenta criada para mostrar a perda do poder de compra do real nos \xFAltimos anos e como isso afeta diretamente na vida dos brasileiros."
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("meta", {
-      name: "facebook-domain-verification",
-      content: "dz0rtvkf5s20ww9d9g1m8j960kp7bv"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("meta", {
-      property: "og:url",
-      content: "http://desvalorizacao.com/"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("meta", {
-      property: "og:type",
-      content: "site"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("meta", {
-      property: "og:title",
-      content: "Quando o seu dinheiro se desvalorizou nos \xFAltimos anos? "
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("meta", {
-      property: "og:description",
-      content: "Essa ferramenta tem o objetico de demonstrar o tanto que o seu dinheiro se desvalorizou nos \xFAltimos anos."
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("meta", {
-      property: "og:image",
-      content: "https://desvalorizacao.com/image/android-chrome-512x512.png"
-    })]
+    })
   });
 };
 
@@ -9372,31 +9351,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Header = function Header() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_helmet__WEBPACK_IMPORTED_MODULE_2__.Helmet, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("title", {
-      children: "Ajuda"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("meta", {
-      name: "description",
-      content: "Desvaloriza\xE7\xE3o \xE9 uma ferramenta criada para mostrar a perda do poder de compra do real nos \xFAltimos anos e como isso afeta diretamente na vida dos brasileiros."
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("meta", {
-      name: "facebook-domain-verification",
-      content: "dz0rtvkf5s20ww9d9g1m8j960kp7bv"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("meta", {
-      property: "og:url",
-      content: "http://desvalorizacao.com/"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("meta", {
-      property: "og:type",
-      content: "site"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("meta", {
-      property: "og:title",
-      content: "Quando o seu dinheiro se desvalorizou nos \xFAltimos anos? "
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("meta", {
-      property: "og:description",
-      content: "Essa ferramenta tem o objetico de demonstrar o tanto que o seu dinheiro se desvalorizou nos \xFAltimos anos."
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("meta", {
-      property: "og:image",
-      content: "https://desvalorizacao.com/image/android-chrome-512x512.png"
-    })]
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_helmet__WEBPACK_IMPORTED_MODULE_2__.Helmet, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("title", {
+      children: "Sobre"
+    })
   });
 };
 
