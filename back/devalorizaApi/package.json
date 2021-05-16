@@ -33,9 +33,12 @@
         "web-vitals": "^1.0.1"
     },
     "dependencies": {
+        "@inertiajs/inertia": "^0.8.7",
+        "@inertiajs/inertia-react": "^0.5.12",
         "mix-env-file": "^0.1.1",
         "react-dotenv": "^0.1.3",
         "react-ga": "^3.3.0",
+        "react-helmet": "^6.1.0",
         "react-router-dom": "^5.2.0"
     }
 }

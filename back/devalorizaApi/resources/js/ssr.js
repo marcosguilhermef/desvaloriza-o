@@ -12,4 +12,4 @@
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./desvalorizaJs/index.js');
+require('./desvalorizaJs/indexSsr.js');

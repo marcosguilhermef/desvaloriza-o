@@ -1,5 +1,24 @@
 import React, {useRef} from 'react'
 import { Row, Col, Container, Form, Button } from 'react-bootstrap'
+import NavbarHome from '../component/navbar/navbarSsr'; 
+import {Helmet} from "react-helmet";
+
+
+const Header = () => {
+    return(
+        <Helmet>
+            <title>Ajuda</title>
+            <meta name="description" content="Desvalorização é uma ferramenta criada para mostrar a perda do poder de compra do real nos últimos anos e como isso afeta diretamente na vida dos brasileiros." />
+            <meta name="facebook-domain-verification" content="dz0rtvkf5s20ww9d9g1m8j960kp7bv" />
+            <meta property="og:url"            content="http://desvalorizacao.com/" />
+            <meta property="og:type"           content="site" />
+            <meta property="og:title"          content="Quando o seu dinheiro se desvalorizou nos últimos anos? " />
+            <meta property="og:description"    content="Essa ferramenta tem o objetico de demonstrar o tanto que o seu dinheiro se desvalorizou nos últimos anos." />
+            <meta property="og:image"          content="https://desvalorizacao.com/image/android-chrome-512x512.png" />
+        </Helmet>
+    )
+}
+
 const Sobre = (props) => {
     const pix = useRef(null);
     const bitcoin = useRef(null);
@@ -26,6 +45,9 @@ const Sobre = (props) => {
 
     }
     return (
+        <>
+        <Header/>
+        <NavbarHome/>
         <Container fluid>
             <main className="m-sm-5 p-sm-5 ">
                 <Row>
@@ -36,7 +58,7 @@ const Sobre = (props) => {
                             Atualmente estamos usando o indice IPCA trimestral como referência.
                         </p>
                         <p className="text-center mt-5">
-                            Versão atual: 1.1.0
+                            Versão atual: 1.2.0
                         </p>
                     </Col>
                     <Col className="text-center border-radius m-1" sm>
@@ -56,6 +78,7 @@ const Sobre = (props) => {
                 </Row>
             </main>
         </Container>
+    </>
 
     )
 }

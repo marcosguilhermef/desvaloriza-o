@@ -1,7 +1,8 @@
 {
-    "name": "laravel/laravel",
+    "name": "Desvalorizaçãojs",
     "type": "project",
     "description": "The Laravel Framework.",
+    "version": "1.2.0",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
@@ -9,6 +10,7 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "inertiajs/inertia-laravel": "^0.4.2",
         "jenssegers/mongodb": "^3.8",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",

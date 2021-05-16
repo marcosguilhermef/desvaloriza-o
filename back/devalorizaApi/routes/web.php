@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +17,17 @@ use Illuminate\Support\Facades\Route;
 /* Route::get('/{path?}', function () {
     return view('home');
 }); */
-Route::get('/{path?}', function () {
-    return view('home');
-})->where('path', '.*');
+Inertia::setRootView('ssr') ;
+
+Route::get('/', function () {
+    return Inertia::render('Home');
+});
+Route::get('/sobre', function () {
+    return Inertia::render('Sobre');
+});
+
+Route::get('/teste', function () {
+    return Inertia::render('Teste');
+});
 
 

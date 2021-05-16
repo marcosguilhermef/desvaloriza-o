@@ -3,14 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Desvalorização é uma ferramenta criada para mostrar a perda do poder de compra do real nos últimos anos e como isso afeta diretamente na vida dos brasileiros." />
-    <meta name="facebook-domain-verification" content="dz0rtvkf5s20ww9d9g1m8j960kp7bv" />
-    <meta property="og:url"            content="http://desvalorizacao.com/" />
-    <meta property="og:type"           content="site" />
-    <meta property="og:title"          content="Quando o seu dinheiro se desvalorizou nos últimos anos? " />
-    <meta property="og:description"    content="Essa ferramenta tem o objetico de demonstrar o tanto que o seu dinheiro se desvalorizou nos últimos anos." />
-    <meta property="og:image"          content="https://desvalorizacao.com/image/android-chrome-512x512.png" />
-
     <link rel="icon" href="{{ asset('image/navegador.png') }}" />
     <link rel="apple-touch-icon" href="{{ asset('image/apple-touch-icon.png') }}" />
     <link rel="shortcut icon" href="{{ asset('image/favicon.ico') }}" >
@@ -30,12 +22,10 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Desvalorização</title>
-    <script src="{{ asset('js/react.js') }}" defer></script>
-
+    <script src="{{ asset('js/ssr.js') }}" defer></script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    @inertia
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
