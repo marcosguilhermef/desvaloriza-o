@@ -10,7 +10,7 @@ import ReactGA from 'react-ga';
 
 
 function App() {
-  ReactGA.initialize('UA-196508960-1', { debug: true });
+  ReactGA.initialize('UA-196508960-1', { debug: false });
   return (
     <>
       <BrowserRouter>
