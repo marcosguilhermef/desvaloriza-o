@@ -1,0 +1,29 @@
+* Hoje é dia 15 de maio de 2021
+
+Esse diário server como guia para produção de software. Dessa forma, consiguirei organizar melhor a rotina de trabalho para finalizar esse projeto.
+Vamos começar com a explanaçao de algumais ideias interessantes para serem feitos no projeto nesse final de semana. Seguindo a seguinte  rotina  de 
+prioridade. 
+
+1) Excencial: Coisas que devem ser feitas antes de todo o projeto. Pois se for feito de outra forma poderá quebrar o projeto;
+2) Fácil: Coisas que são fácilmente implementáveis e que são interessantes;
+3) Dificeis: Coisas que são dificeis de serem implementadas, porém trazem grandes resultados para o Projeto.
+
+Esquema: na parte de esquema vou explicar como deve ser o procedimento de execução do projeto.
+
+* Agora vamos começar o esquema:
+
+1) Exencial: Esse é uma das partes mas desafiantes até o momento. Preciso que o desvalorizaçao seja ssr. Pois dessa forma, terei um grande aumento de perfor-
+manse no carregamento do site. Além disso, será mais fácil para que o google indexe futuras ferramentas do projeto. Para fazer isso, vou utilizar a 
+biblioteca de laravel inertiajs que tem a finalizadade de criar ssrs usando frameworks javascript junto do laravel.
+|-> Como proceder? Devo começar pela instalação das bibliotetas;
+|-> Status atual: Em execução.
+
+
+2) Fácil: Vou colocar a compração do preço do dolar em relação a cotação passada.
+|-> Como proceder? Devo baixar os dados hitoricos do dolar em relaçao ao real. Porem ainda não encontrei informaçoes confiaveis sobre o assunto.
+|-> E depois? Devo criar programa python para salvar tudo no banco de dados.
+|-> Status atual: Em execução.
+
+3) Fácil: Tenho que colocar também o comparativo de salário minimo.
+|-> Como proceder? Situaçao exatamente identica a situaçao 2
+|-> Status atual: Em execução.
