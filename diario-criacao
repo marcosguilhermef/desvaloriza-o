@@ -16,7 +16,7 @@ Esquema: na parte de esquema vou explicar como deve ser o procedimento de execu�
 manse no carregamento do site. Além disso, será mais fácil para que o google indexe futuras ferramentas do projeto. Para fazer isso, vou utilizar a 
 biblioteca de laravel inertiajs que tem a finalizadade de criar ssrs usando frameworks javascript junto do laravel.
 |-> Como proceder? Devo começar pela instalação das bibliotetas;
-|-> Status atual: Em execução.
+|-> Status atual: Concluído no dia 16/05 às 8:29.
 
 
 2) Fácil: Vou colocar a compração do preço do dolar em relação a cotação passada.
@@ -25,5 +25,13 @@ biblioteca de laravel inertiajs que tem a finalizadade de criar ssrs usando fram
 |-> Status atual: Em execução.
 
 3) Fácil: Tenho que colocar também o comparativo de salário minimo.
+|-> Como proceder? Situaçao exatamente identica a situaçao 2
+|-> Status atual: Em execução.
+
+4) Fácil: Colocar a taxa IPCM Mensal.
+|-> Como proceder? Situaçao exatamente identica a situaçao 2
+|-> Status atual: Em execução.
+
+5) Fácil: Colocar a moeda usada na época da analize.
 |-> Como proceder? Situaçao exatamente identica a situaçao 2
 |-> Status atual: Em execução.
