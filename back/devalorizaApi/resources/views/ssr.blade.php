@@ -22,6 +22,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <script src="{{ asset('js/ssr.js') }}" defer></script>
+    <script data-ad-client="ca-pub-8817634033676287" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   </head>
   <body>
     @inertia
