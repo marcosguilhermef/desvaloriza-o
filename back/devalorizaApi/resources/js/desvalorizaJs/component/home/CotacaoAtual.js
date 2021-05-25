@@ -46,7 +46,7 @@ export const  CotacaoAtual = (props) => {
     })
     return(
     <>
-            <Card.Title className="text-center">Cotação inicial</Card.Title>
+            <Card.Title className="text-center">Cotação Final</Card.Title>
             <Informacoes props={props}/>
             <Form.Group controlId="valor-atual">
                 <Form.Label>Valor atual</Form.Label>
