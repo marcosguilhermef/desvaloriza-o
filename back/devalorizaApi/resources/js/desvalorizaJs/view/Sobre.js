@@ -56,7 +56,7 @@ const Sobre = (props) => {
                             Atualmente estamos usando o indice IPCA trimestral como referência.
                         </p>
                         <p className="text-center mt-5">
-                            Versão atual: 1.2.0
+                            Versão atual: 1.3.0
                         </p>
                     </Col>
                     <Col className="text-center border-radius m-1" sm>
