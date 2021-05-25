@@ -8411,6 +8411,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Form.js");
 /* harmony import */ var _CotacaoAtual_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CotacaoAtual.css */ "./resources/js/desvalorizaJs/component/home/CotacaoAtual.css");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -8491,12 +8497,31 @@ var Informacoes = function Informacoes(_ref) {
 };
 
 var CotacaoAtual = function CotacaoAtual(props) {
+  var _props$dolar$2;
+
   var valorConvertido = props.valorconvertido;
   var receberValor = props.recebervalor;
+
+  var _props$dolar$ = _objectSpread({}, props === null || props === void 0 ? void 0 : props.dolar[0]),
+      Mínima = _props$dolar$.Mínima;
+
+  var Passado = props === null || props === void 0 ? void 0 : (_props$dolar$2 = props.dolar[1]) === null || _props$dolar$2 === void 0 ? void 0 : _props$dolar$2.Mínima;
+
+  var variacao = function variacao() {
+    if (Passado && Mínima) {
+      return ((parseFloat(Mínima.replace(',', '.')) / parseFloat(Passado.replace(',', '.')) - 1) * 100).toFixed(4) + '%';
+    }
+
+    return 'Não há dados suficientes para a analize';
+  };
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    console.log(variacao());
+  });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default.Title, {
       className: "text-center",
-      children: "Valor atual"
+      children: "Cota\xE7\xE3o inicial"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Informacoes, {
       props: props
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Group, {
@@ -8508,6 +8533,14 @@ var CotacaoAtual = function CotacaoAtual(props) {
         placeholder: "R$ 0,00",
         value: valorConvertido,
         onChange: receberValor
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h5", {
+      children: "Com esse valor voc\xEA compraria hoje:"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("li", {
+        children: [" Valor do \uD83D\uDCB5 (D\xF3lar) nesse dia: ", 'R$ ' + (Mínima || 'Não há dados sobre esse dia')]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("li", {
+        children: [" Nesse per\xEDodo o dolar variou: ", variacao(), " "]
       })]
     })]
   });
@@ -8533,6 +8566,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Form.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Dropdown.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -8561,10 +8600,14 @@ var CotacaoPassada = function CotacaoPassada(props) {
   var receberValor = props.recebervalor;
   var dataPassada = props.dataPassada;
   var optionsIndice = props === null || props === void 0 ? void 0 : props.opcoesIndice;
+
+  var _props$dolar = _objectSpread({}, props.dolar),
+      Mínima = _props$dolar.Mínima;
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default.Title, {
       className: "text-center",
-      children: "Cota\xE7\xE3o passada"
+      children: "Cota\xE7\xE3o Inicial"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default.Group, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
         className: "lg-12",
@@ -8592,7 +8635,7 @@ var CotacaoPassada = function CotacaoPassada(props) {
         onChange: dataPassada,
         min: "1995-01-01",
         max: moment__WEBPACK_IMPORTED_MODULE_0___default()().format('YYYY-MM-DD'),
-        pattern: "[0-9]{4}-[0-9]{2}"
+        pattern: "[0-9]{4}-[0-9]{2}-[0-9]{2}"
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default.Group, {
       controlId: "dataFinal",
@@ -8603,7 +8646,7 @@ var CotacaoPassada = function CotacaoPassada(props) {
         onChange: dataPassada,
         min: "1995-01-01",
         max: moment__WEBPACK_IMPORTED_MODULE_0___default()().format('YYYY-MM-DD'),
-        pattern: "[0-9]{4}-[0-9]{2}"
+        pattern: "[0-9]{4}-[0-9]{2}-[0-9]{2}"
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default.Group, {
       controlId: "valor-passado",
@@ -8615,6 +8658,12 @@ var CotacaoPassada = function CotacaoPassada(props) {
         value: valorConvertido,
         onChange: receberValor
       })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h5", {
+      children: "Com esse valor voc\xEA compraria naquela \xE9poca:"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ul", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("li", {
+        children: [" Valor do \uD83D\uDCB5 (D\xF3lar) nesse dia: ", 'R$ ' + (Mínima || 'Não há dados sobre esse dia')]
+      })
     })]
   });
 };
@@ -8828,7 +8877,8 @@ var fetchDados = function fetchDados(datas, callback) {
               dados = _context.sent;
 
               if (response.ok) {
-                dispatch((0,_server_slices_api__WEBPACK_IMPORTED_MODULE_2__.setDados)(dados));
+                dispatch((0,_server_slices_api__WEBPACK_IMPORTED_MODULE_2__.setDados)(dados.ipca));
+                dispatch((0,_server_slices_api__WEBPACK_IMPORTED_MODULE_2__.setDolar)(dados.dolar));
                 dispatch((0,_server_slices_api__WEBPACK_IMPORTED_MODULE_2__.setStatus)('sucesso'));
               } else {
                 dispatch((0,_server_slices_api__WEBPACK_IMPORTED_MODULE_2__.setStatus)('erro'));
@@ -8920,6 +8970,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "setStatus": () => (/* binding */ setStatus),
 /* harmony export */   "setDownload": () => (/* binding */ setDownload),
 /* harmony export */   "setData": () => (/* binding */ setData),
+/* harmony export */   "setDolar": () => (/* binding */ setDolar),
 /* harmony export */   "apiReducer": () => (/* binding */ apiReducer)
 /* harmony export */ });
 /* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
@@ -8934,9 +8985,10 @@ var api = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)({
   name: 'api',
   initialState: {
     dadosHitoricos: [],
+    dolar: [],
     datas: {
-      dataInicial: '01-2018',
-      dataFinal: '04-2021'
+      dataInicial: '01-01-2018',
+      dataFinal: '01-04-2021'
     },
     status: 'ocioso',
     mensagem: '',
@@ -8945,6 +8997,9 @@ var api = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)({
   reducers: {
     setDados: function setDados(state, action) {
       state.dadosHitoricos = action.payload;
+    },
+    setDolar: function setDolar(state, action) {
+      state.dolar = action.payload;
     },
     setStatus: function setStatus(state, action) {
       state.status = action.payload;
@@ -8965,7 +9020,8 @@ var _api$actions = api.actions,
     setDados = _api$actions.setDados,
     setStatus = _api$actions.setStatus,
     setDownload = _api$actions.setDownload,
-    setData = _api$actions.setData;
+    setData = _api$actions.setData,
+    setDolar = _api$actions.setDolar;
 
 var apiReducer = api.reducer;
 
@@ -9127,6 +9183,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
       taxa: 1.5,
       valorAtual: 0,
       valorPassado: 0,
+      dolar: _this.props.api.dolar,
       datas: {
         dataInicial: _this.props.api.datas.dataInicial,
         dataFinal: _this.props.api.datas.dataFinal
@@ -9231,7 +9288,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
       var _e$target3,
           _this2 = this;
 
-      var state = _objectSpread(_objectSpread({}, this.state.datas), {}, _defineProperty({}, e.target.id, moment__WEBPACK_IMPORTED_MODULE_7___default()((_e$target3 = e.target) === null || _e$target3 === void 0 ? void 0 : _e$target3.value, 'YYYY-MM-DD').format('MM-YYYY')));
+      var state = _objectSpread(_objectSpread({}, this.state.datas), {}, _defineProperty({}, e.target.id, moment__WEBPACK_IMPORTED_MODULE_7___default()((_e$target3 = e.target) === null || _e$target3 === void 0 ? void 0 : _e$target3.value, 'YYYY-MM-DD').format('DD-MM-YYYY')));
 
       this.setState({
         datas: state
@@ -9245,6 +9302,8 @@ var Home = /*#__PURE__*/function (_React$Component) {
       if (this.state.taxa !== prevState.taxa) {
         this.converterValorPassadoEContraio();
         this.converterValorAoContrario();
+        console.log(this.props.api);
+        console.log(this.state);
       } //console.log('props',this.props)
 
     }
@@ -9278,7 +9337,8 @@ var Home = /*#__PURE__*/function (_React$Component) {
                       recebervalor: this.receberValor,
                       dataPassada: this.handleDateSubmit,
                       opcoesIndice: this.props.config.indices,
-                      datas: this.state.datas
+                      datas: this.state.datas,
+                      dolar: this.props.api.dolar[1]
                     })
                   })
                 })
@@ -9294,7 +9354,8 @@ var Home = /*#__PURE__*/function (_React$Component) {
                       recebervalor: this.receberValor,
                       taxa: this.state.taxa,
                       datas: this.state.datas,
-                      status: this.props.api.status
+                      status: this.props.api.status,
+                      dolar: this.props.api.dolar
                     })
                   })
                 })

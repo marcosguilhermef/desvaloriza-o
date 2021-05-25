@@ -33,22 +33,34 @@ const Informacoes = ({props}) => {
 export const  CotacaoAtual = (props) => {
     const valorConvertido           =       props.valorconvertido
     const receberValor              =       props.recebervalor
+    const {Mínima}                  =       {...props?.dolar[0]}
+    const Passado                   =       props?.dolar[1]?.Mínima
+    const variacao                  =   () =>   {
+        if(Passado && Mínima){
+            return ((parseFloat(Mínima.replace(',','.')) / parseFloat(Passado.replace(',','.')) - 1) * 100).toFixed(4)  + '%'
+        }
+        return 'Não há dados suficientes para a analize'
+    }
+    useEffect( () => {
+        console.log(variacao())
+    })
     return(
     <>
-            <Card.Title className="text-center">Valor atual</Card.Title>
+            <Card.Title className="text-center">Cotação inicial</Card.Title>
             <Informacoes props={props}/>
             <Form.Group controlId="valor-atual">
                 <Form.Label>Valor atual</Form.Label>
                 <Form.Control type="number" placeholder="R$ 0,00" value={valorConvertido} onChange={receberValor}/>
             </Form.Group> 
-            {/* <h5>Com esse valor você compraria hoje:</h5>
+            <h5>Com esse valor você compraria hoje:</h5>
             <ul>
-                <li>35kg de 🥩 carne</li>
-                <li>1500 unidades de 🥚 ovo</li>
-                <li>35kg de 🍞 pão</li>
-                <li>🍽 PF</li>
+            <li> Valor do 💵 (Dólar) nesse dia: { 'R$ ' + (Mínima || 'Não há dados sobre esse dia') }</li>
+            <li> Nesse período o dolar variou: { variacao() } </li>
 
-            </ul> */}
+                {/* <li>1500 unidades de 🥚 ovo</li>
+                <li>35kg de 🍞 pão</li>
+                <li>🍽 PF</li> */}
+            </ul>
     </>
     )
 }

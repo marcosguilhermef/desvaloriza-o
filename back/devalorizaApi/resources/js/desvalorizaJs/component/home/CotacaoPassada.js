@@ -7,9 +7,10 @@ export const  CotacaoPassada = (props) => {
     const receberValor              =       props.recebervalor
     const dataPassada               =       props.dataPassada
     const optionsIndice             =       props?.opcoesIndice
+    const {Mínima}                  =       {...props.dolar} 
     return(
     <>
-        <Card.Title className="text-center">Cotação passada</Card.Title>
+        <Card.Title className="text-center">Cotação Inicial</Card.Title>
         <Form.Group>
         <Dropdown className='lg-12'>
             <Dropdown.Toggle variant="success" id="dropdown-basic">
@@ -25,24 +26,25 @@ export const  CotacaoPassada = (props) => {
 
         <Form.Group controlId="dataInicial">
             <Form.Label>Data inicial:</Form.Label>
-            <Form.Control type="date" onChange={dataPassada} min="1995-01-01" max={moment().format('YYYY-MM-DD')}  pattern="[0-9]{4}-[0-9]{2}"></Form.Control>
+            <Form.Control type="date" onChange={dataPassada} min="1995-01-01" max={moment().format('YYYY-MM-DD')}  pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"></Form.Control>
         </Form.Group>
         <Form.Group controlId="dataFinal">
             <Form.Label>Data final:</Form.Label>
-            <Form.Control type="date" onChange={dataPassada}  min="1995-01-01" max={moment().format('YYYY-MM-DD')}  pattern="[0-9]{4}-[0-9]{2}"></Form.Control>
+            <Form.Control type="date" onChange={dataPassada}  min="1995-01-01" max={moment().format('YYYY-MM-DD')}  pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"></Form.Control>
         </Form.Group>
         <Form.Group controlId="valor-passado">
             <Form.Label>Valor atual:</Form.Label>
             <Form.Control type="number" placeholder="R$ 0,00" value={valorConvertido} onChange={receberValor}/>
         </Form.Group>
-    {/*         <h5>Com esse valor você compraria naquela época:</h5>
+           <h5>Com esse valor você compraria naquela época:</h5>
             <ul>
-                <li>35kg de 🥩 carne</li>
+                <li> Valor do 💵 (Dólar) nesse dia: { 'R$ ' + (Mínima || 'Não há dados sobre esse dia') }</li>
+            {/*
                 <li>1500 unidades de 🥚 ovo</li>
                 <li>35kg de 🍞 pão</li>
-                <li>🍽 PF</li>
-
-        </ul> */}
+                <li>🍽 PF</li> 
+            */}
+        </ul> 
     </>    
     )
 }

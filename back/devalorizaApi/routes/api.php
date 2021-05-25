@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Ipca; 
 use App\Http\Controllers\Indices;
+use App\Http\Controllers\DolarController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +25,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/ipca', [Ipca::class, 'index'])->middleware('throttle:5000,1');
 Route::get('/indice', [Indices::class,'index'])->middleware('throttle:5000,1');
 Route::get('/ipca/all', [Ipca::class, 'allData'])->middleware('throttle:5000,1');
+Route::get('/dolar/all', [DolarController::class,'allData'])->middleware('throttle:5000,1');
+
 
 

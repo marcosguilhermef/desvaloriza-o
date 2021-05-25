@@ -2,9 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Jenssegers\Mongodb\Eloquent\Model;
-
+use MongoDB\BSON\UTCDateTime;
 
 class Inflacao extends Model
 {
@@ -29,15 +28,15 @@ class Inflacao extends Model
     
     public function select(array $datas, String $indice = '6063d75974cd30cc48479bdd')
     {
-        return inflacao::raw(
+        $result = inflacao::raw(
             function ($collection) use ($datas) {
                 return $collection->aggregate([
                     ['$unwind' => '$IPCA'],
                     [
                         '$match' => [
                             'IPCA.data.fulldate' => [
-                                '$gte' => new \MongoDB\BSON\UTCDateTime((new \DateTime($datas['dataInicial']['ano'] . '-' . $datas['dataInicial']['mes']))), 
-                                '$lte' => new \MongoDB\BSON\UTCDateTime((new \DateTime($datas['dataFinal']['ano'] . '-' . $datas['dataFinal']['mes'])))
+                                '$gte' => new UTCDateTime((new \DateTime($datas['dataInicial']['ano'] . '-' . $datas['dataInicial']['mes']))), 
+                                '$lte' => new UTCDateTime((new \DateTime($datas['dataFinal']['ano'] . '-' . $datas['dataFinal']['mes'])))
                             ]
                         ]
                     ],
@@ -47,6 +46,7 @@ class Inflacao extends Model
                 ]);
             }
         );
+        return $result;
     }
     protected function mes(int $i)
     {

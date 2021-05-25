@@ -33,6 +33,7 @@ class Home extends React.Component {
             taxa: 1.5,
             valorAtual: 0,
             valorPassado: 0,
+            dolar: this.props.api.dolar,
             datas: {
                 dataInicial: this.props.api.datas.dataInicial,
                 dataFinal: this.props.api.datas.dataFinal
@@ -73,13 +74,15 @@ class Home extends React.Component {
         this.props.setData({ state, key: key }, this.CalcularVariareis())
     }
     handleDateSubmit(e) {
-        const state = { ...this.state.datas, [e.target.id]: moment(e.target?.value, 'YYYY-MM-DD',).format('MM-YYYY') }
+        const state = { ...this.state.datas, [e.target.id]: moment(e.target?.value, 'YYYY-MM-DD',).format('DD-MM-YYYY') }
         this.setState({ datas: state }, () => { this.atualizaStoreDeData(state, e.target.id) });
     }
     componentDidUpdate(prevProps, prevState) {
         if (this.state.taxa !== prevState.taxa) {
             this.converterValorPassadoEContraio()
             this.converterValorAoContrario()
+            console.log(this.props.api)
+            console.log(this.state)
         }
         //console.log('props',this.props)
     }
@@ -101,14 +104,14 @@ class Home extends React.Component {
                                 <Col className="m-1">
                                     <Card style={{ height: '100%' }}>
                                         <Card.Body>
-                                            <CotacaoPassada valorconvertido={this.state.valorPassado} recebervalor={this.receberValor} dataPassada={this.handleDateSubmit} opcoesIndice={this.props.config.indices} datas={this.state.datas} />
+                                            <CotacaoPassada valorconvertido={this.state.valorPassado} recebervalor={this.receberValor} dataPassada={this.handleDateSubmit} opcoesIndice={this.props.config.indices} datas={this.state.datas} dolar={this.props.api.dolar[1]}/>
                                         </Card.Body>
                                     </Card>
                                 </Col>
                                 <Col className="m-1">
                                     <Card style={{ height: '100%'}}>
                                         <Card.Body>
-                                            <CotacaoAtual valorconvertido={this.state.valorAtual} recebervalor={this.receberValor} taxa={this.state.taxa} datas={this.state.datas} status={this.props.api.status} />
+                                            <CotacaoAtual valorconvertido={this.state.valorAtual} recebervalor={this.receberValor} taxa={this.state.taxa} datas={this.state.datas} status={this.props.api.status} dolar={this.props.api.dolar}/>
                                         </Card.Body>
                                     </Card>
                                 </Col>

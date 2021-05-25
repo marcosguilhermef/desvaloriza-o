@@ -4,7 +4,8 @@ export const api = createSlice({
     name: 'api',
     initialState:{
       dadosHitoricos: [],
-      datas: { dataInicial: '01-2018', dataFinal: '04-2021' },
+      dolar: [],
+      datas: { dataInicial: '01-01-2018', dataFinal: '01-04-2021' },
       status: 'ocioso',
       mensagem: '' ,
       download: 0
@@ -12,6 +13,9 @@ export const api = createSlice({
     reducers: {
       setDados: (state, action) => {
         state.dadosHitoricos = action.payload
+      },
+      setDolar: (state,action) => {
+        state.dolar = action.payload
       },
       setStatus: (state, action) => {
         state.status = action.payload
@@ -32,5 +36,5 @@ export const api = createSlice({
     }
   })
 
-export const { setDados , setStatus ,setDownload  , setData  } = api.actions
+export const { setDados , setStatus ,setDownload  , setData, setDolar  } = api.actions
 export const apiReducer = api.reducer
