@@ -8497,15 +8497,15 @@ var Informacoes = function Informacoes(_ref) {
 };
 
 var CotacaoAtual = function CotacaoAtual(props) {
-  var _props$dolar$2;
+  var _props$dolar$dataFina2, _props$dolar$dataInic, _props$dolar$dataInic2;
 
   var valorConvertido = props.valorconvertido;
   var receberValor = props.recebervalor;
 
-  var _props$dolar$ = _objectSpread({}, props === null || props === void 0 ? void 0 : props.dolar[0]),
-      Mínima = _props$dolar$.Mínima;
+  var _props$dolar$dataFina = _objectSpread({}, (_props$dolar$dataFina2 = props.dolar.dataFinal) === null || _props$dolar$dataFina2 === void 0 ? void 0 : _props$dolar$dataFina2[0]),
+      Mínima = _props$dolar$dataFina.Mínima;
 
-  var Passado = props === null || props === void 0 ? void 0 : (_props$dolar$2 = props.dolar[1]) === null || _props$dolar$2 === void 0 ? void 0 : _props$dolar$2.Mínima;
+  var Passado = props === null || props === void 0 ? void 0 : (_props$dolar$dataInic = props.dolar.dataInicial) === null || _props$dolar$dataInic === void 0 ? void 0 : (_props$dolar$dataInic2 = _props$dolar$dataInic[0]) === null || _props$dolar$dataInic2 === void 0 ? void 0 : _props$dolar$dataInic2.Mínima;
 
   var variacao = function variacao() {
     if (Passado && Mínima) {
@@ -8521,7 +8521,7 @@ var CotacaoAtual = function CotacaoAtual(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default.Title, {
       className: "text-center",
-      children: "Cota\xE7\xE3o inicial"
+      children: "Cota\xE7\xE3o Final"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Informacoes, {
       props: props
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__.default.Group, {
@@ -8591,6 +8591,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var CotacaoPassada = function CotacaoPassada(props) {
+  var _props$dolar;
+
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)((props === null || props === void 0 ? void 0 : props.opcoesIndice) && 'IPCA mensal'),
       _useState2 = _slicedToArray(_useState, 2),
       select = _useState2[0],
@@ -8601,8 +8603,8 @@ var CotacaoPassada = function CotacaoPassada(props) {
   var dataPassada = props.dataPassada;
   var optionsIndice = props === null || props === void 0 ? void 0 : props.opcoesIndice;
 
-  var _props$dolar = _objectSpread({}, props.dolar),
-      Mínima = _props$dolar.Mínima;
+  var _props$dolar$ = _objectSpread({}, (_props$dolar = props.dolar) === null || _props$dolar === void 0 ? void 0 : _props$dolar[0]),
+      Mínima = _props$dolar$.Mínima;
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default.Title, {
@@ -9338,7 +9340,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
                       dataPassada: this.handleDateSubmit,
                       opcoesIndice: this.props.config.indices,
                       datas: this.state.datas,
-                      dolar: this.props.api.dolar[1]
+                      dolar: this.props.api.dolar['dataInicial']
                     })
                   })
                 })
@@ -9478,7 +9480,7 @@ var Sobre = function Sobre(props) {
               children: "Projeto desenvolvido com o objetivo de informar sobre a desvaloriza\xE7\xE3o do real durante as \xFAtimas dec\xE1das. Este projeto ainda n\xE3o est\xE1 completo, portanto toda semana (domingo) \xE9 lan\xE7ada alguma atualiza\xE7\xE3o. Atualmente estamos usando o indice IPCA trimestral como refer\xEAncia."
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
               className: "text-center mt-5",
-              children: "Vers\xE3o atual: 1.2.0"
+              children: "Vers\xE3o atual: 1.3.0"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
             className: "text-center border-radius m-1",

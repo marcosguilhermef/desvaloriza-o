@@ -104,7 +104,7 @@ class Home extends React.Component {
                                 <Col className="m-1">
                                     <Card style={{ height: '100%' }}>
                                         <Card.Body>
-                                            <CotacaoPassada valorconvertido={this.state.valorPassado} recebervalor={this.receberValor} dataPassada={this.handleDateSubmit} opcoesIndice={this.props.config.indices} datas={this.state.datas} dolar={this.props.api.dolar[1]}/>
+                                            <CotacaoPassada valorconvertido={this.state.valorPassado} recebervalor={this.receberValor} dataPassada={this.handleDateSubmit} opcoesIndice={this.props.config.indices} datas={this.state.datas} dolar={this.props.api.dolar['dataInicial']}/>
                                         </Card.Body>
                                     </Card>
                                 </Col>

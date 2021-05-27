@@ -1,5 +1,5 @@
 import moment from 'moment'
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Card, Form, Dropdown } from 'react-bootstrap'
 export const  CotacaoPassada = (props) => {
     const [select,selectItem]       =       useState(props?.opcoesIndice && 'IPCA mensal')
@@ -7,7 +7,7 @@ export const  CotacaoPassada = (props) => {
     const receberValor              =       props.recebervalor
     const dataPassada               =       props.dataPassada
     const optionsIndice             =       props?.opcoesIndice
-    const {Mínima}                  =       {...props.dolar} 
+    const {Mínima}                  =       {...props.dolar?.[0]} 
     return(
     <>
         <Card.Title className="text-center">Cotação Inicial</Card.Title>

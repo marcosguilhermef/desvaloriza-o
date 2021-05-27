@@ -27,8 +27,7 @@ class DolarModel extends Model
                         [
                             '$match' => [
                                 '$or' => [
-                                    ['Ano' => ['$eq' => intval($datas['dataInicial']['ano'])], 'Mes' => ['$eq' => intval($datas['dataInicial']['mes'])], 'Dia' => ['$eq' => intval($datas['dataInicial']['dia'])]],
-                                    ['Ano' => ['$eq' => intval($datas['dataFinal']['ano'])], 'Mes' => ['$eq' => intval($datas['dataFinal']['mes'])], 'Dia' => ['$eq' => intval($datas['dataFinal']['dia'])]]
+                                    ['Ano' => ['$eq' => intval($datas['ano'])], 'Mes' => ['$eq' => intval($datas['mes'])], 'Dia' => ['$eq' => intval($datas['dia'])]],
                                 ]
                             ]
                         ],

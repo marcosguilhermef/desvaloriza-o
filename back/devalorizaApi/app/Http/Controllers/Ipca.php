@@ -26,7 +26,11 @@ class Ipca extends Controller
             );
             $newResult = [
                 'ipca'   => $this->acessoAoIpca->select($query),
-                'dolar'  => $this->acessoAoDolar->select($query)
+                'dolar'  => [
+                    "dataInicial" => $this->acessoAoDolar->select($query['dataInicial']),
+                    "dataFinal" => $this->acessoAoDolar->select($query['dataFinal'])
+                ]
+                //'dolar'  => $this->acessoAoDolar->select($query)
             ];
             return response()->json($newResult,200,['Charset' => 'utf-8'],JSON_UNESCAPED_UNICODE);
         }

@@ -33,8 +33,8 @@ const Informacoes = ({props}) => {
 export const  CotacaoAtual = (props) => {
     const valorConvertido           =       props.valorconvertido
     const receberValor              =       props.recebervalor
-    const {Mínima}                  =       {...props?.dolar[0]}
-    const Passado                   =       props?.dolar[1]?.Mínima
+    const {Mínima}                  =       {...props.dolar.dataFinal?.[0]}
+    const Passado                   =       props?.dolar.dataInicial?.[0]?.Mínima
     const variacao                  =   () =>   {
         if(Passado && Mínima){
             return ((parseFloat(Mínima.replace(',','.')) / parseFloat(Passado.replace(',','.')) - 1) * 100).toFixed(4)  + '%'
