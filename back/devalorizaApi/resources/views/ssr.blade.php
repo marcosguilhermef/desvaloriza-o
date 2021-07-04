@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="propeller" content="776643639ee30ae82463e1c0a1725b47">
     <link rel="icon" href="{{ asset('image/navegador.png') }}" />
     <link rel="apple-touch-icon" href="{{ asset('image/apple-touch-icon.png') }}" />
     <link rel="shortcut icon" href="{{ asset('image/favicon.ico') }}" >
